@@ -37,7 +37,7 @@ val fabric_loader_version: String by project
 val fabric_api_version: String by project
 val fabric_kotlin_version: String by project
 val create_version: String by project
-val porting_lib_version: String by project
+//val porting_lib_version: String by project
 val ktor_version: String by project
 val kotlin_json_version: String by project
 val kotlin_css_version: String by project
@@ -51,7 +51,7 @@ dependencies {
   modImplementation("net.fabricmc:fabric-language-kotlin:$fabric_kotlin_version")
 
   modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:$create_version+mc$minecraft_version")
-  modImplementation("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:$porting_lib_version")
+  //modImplementation("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:$porting_lib_version")
 
   shadowDep("io.ktor:ktor-server-core-jvm:$ktor_version")
   shadowDep("io.ktor:ktor-server-cio-jvm:$ktor_version")
