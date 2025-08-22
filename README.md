@@ -1,6 +1,6 @@
 !!! FONTOS !!!
 Jelenleg, ahhoz hogy buildeljen a mod kelleni fog ez a .gradle mappába : https://drive.google.com/file/d/1QrNPxs1-He9PhKXHNkLU-vOxsYqj88GS/view?usp=sharing
-
+ennek meg a project mappában kell lennie : https://drive.google.com/file/d/1-d_ooZTP2VQqgl2wBWi_qQYn9iQHdbUO/view?usp=sharing
 <!-- modrinth_exclude.start -->
 
 ![Create Track Map](https://raw.githubusercontent.com/gist/jenchanws/44291eb9435be4fc46be1b8661ae4406/raw/b545411b55a9b18bb42c58dcf22f909d2c404498/ctm.svg)
