@@ -14,6 +14,7 @@ val minecraft_version: String by project
 val maven_group: String by project
 val archives_base_name: String by project
 val create_version_short: String by project
+val crn_version: String by project
 
 version = mod_version
 group = maven_group
@@ -28,6 +29,10 @@ repositories {
   maven("https://api.modrinth.com/maven")  // LazyDFU
   maven("https://maven.tterrag.com/")  // Flywheel
   maven("https://www.cursemaven.com")  // Forge Config API Port
+    mavenLocal()
+    flatDir {
+        dirs("crn-local")
+    }
 }
 
 val shadowDep: Configuration by configurations.creating
@@ -49,6 +54,9 @@ dependencies {
   modImplementation("net.fabricmc:fabric-loader:$fabric_loader_version")
   modImplementation("net.fabricmc.fabric-api:fabric-api:$fabric_api_version")
   modImplementation("net.fabricmc:fabric-language-kotlin:$fabric_kotlin_version")
+    modImplementation("de.mrjulsen.crn:createrailwaysnavigator-fabric-$minecraft_version-beta-$crn_version")
+    modImplementation("de.mrjulsen.mcdragonlib:dragonlib-fabric-$minecraft_version-2.2.24")
+    modImplementation("architectury:architectury-9.2.14-fabric")
 
   modImplementation("com.simibubi.create:create-fabric-${minecraft_version}:$create_version+mc$minecraft_version")
   //modImplementation("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:$porting_lib_version")
@@ -133,6 +141,7 @@ modrinth {
     required.project("create-fabric")
     required.project("fabric-api")
     required.project("fabric-language-kotlin")
+      required.project("createrailwaysnavigator-fabric")
   }
 
   uploadFile.set { tasks.remapJar.get().archiveFile }

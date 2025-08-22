@@ -1,6 +1,7 @@
 .gradle
 .idea/
 run/
+crn-local/
 
 build/
 !gradle/wrapper/gradle-wrapper.jar
