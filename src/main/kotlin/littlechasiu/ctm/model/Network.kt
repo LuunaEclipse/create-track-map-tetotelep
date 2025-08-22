@@ -9,6 +9,7 @@ import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import java.util.*
+import de.mrjulsen.crn.data.TrainLine
 
 object UUIDSerializer : KSerializer<UUID> {
   override val descriptor =
@@ -122,13 +123,13 @@ data class TrainCar(
 
 @Serializable
 data class CreateTrain(
-  @Serializable(with = UUIDSerializer::class)
-  val id: UUID,
-  val name: String,
-  val owner: String?,
-  val cars: List<TrainCar>,
-  val backwards: Boolean,
-  val stopped: Boolean,
+    @Serializable(with = UUIDSerializer::class)
+    val id: UUID,
+    val name: String,
+    val owner: String?,
+    val cars: List<TrainCar>,
+    val backwards: Boolean,
+    val stopped: Boolean,
 )
 
 @Serializable

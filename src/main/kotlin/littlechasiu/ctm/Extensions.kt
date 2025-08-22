@@ -11,6 +11,7 @@ import littlechasiu.ctm.model.*
 import net.minecraft.resources.ResourceKey
 import net.minecraft.world.level.Level
 import net.minecraft.world.phys.Vec3
+import de.mrjulsen.crn.data.TrainLine
 
 fun <T> MutableSet<T>.replaceWith(other: Collection<T>) {
   this.retainAll { other.contains(it) }
